@@ -1,17 +1,16 @@
 import { Hono } from "hono";
 import { init } from "./start.services";
-import postRoutes from "./services/createPost";
 
 const app = new Hono();
 
-// Start services
+// initialize 
 init();
 
 app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
 
-// Routes
-app.route("/", postRoutes);
-
-export default app;
+export default {
+  port: 3001,
+  fetch: app.fetch,
+};

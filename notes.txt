@@ -1,0 +1,14 @@
+- docker run -p 2181:2181 zookeeper
+- setup docker compose file
+- In adminstrator mode run and install.
+  - choco install docker
+  - choco install docker-compose
+- docker-compose up
+- bun add kafkajs
+- npm i @hono/zod-validator
+
+
+- servers to run simultaneously
+  1. zookeeper (open docker desktop then run the command on the powershell)
+  2. kafka
+  3. backend servers
